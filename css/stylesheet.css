@@ -86,6 +86,86 @@ nav a:hover {
   margin: 0 auto;
   padding: 2rem 1rem;
 }
+/* about page */
+.about h1 {
+  font-size: 2.5rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1rem;
+  max-width: 650px;
+}
+
+/*home page*/
+.book-row h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;   /* cards now stack vertically since each one is wide */
+  gap: 1.5rem;
+}
+
+.book-card {
+  background-color: #ece8e1;
+  border-radius: 16px;       /* rounded rectangle */
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: #222;
+  display: flex;
+  flex-direction: row;       /* horizontal layout */
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease;
+  max-width: 600px;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+}
+
+.book-cover-block {
+  flex: 0 0 auto;
+  text-align: center;
+  width: 100px;
+}
+
+.book-cover-block img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.book-cover-block .book-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-info .rating {
+  font-weight: 700;
+  color: #b5651d;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.book-info .book-blurb {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
 
 /* coming soon */
 .coming-soon {
