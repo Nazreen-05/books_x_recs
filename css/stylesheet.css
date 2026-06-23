@@ -67,17 +67,20 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 6rem 1rem;
+  background-image: url('../images/image_hero2.jpg');
+  background-size: cover;
 }
 
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 0.5rem;
   font-family: Georgia, 'Times New Roman', serif;
+  color: #d99a4e;
 }
 
 .hero p {
   font-size: 1.2rem;
-  color: #666;
+  color: #fff;
 }
 
 /* container */
@@ -87,15 +90,24 @@ nav a:hover {
   padding: 2rem 1rem;
 }
 /* about page */
+.about{
+  background-image: url('../images/about2.jpg');
+  background-size: cover;
+  padding: 2rem 1rem;
+  background-repeat: no-repeat;
+
+  
+}
 .about h1 {
   font-size: 2.5rem;
   font-family: Georgia, 'Times New Roman', serif;
   margin-bottom: 1.5rem;
+  color: #d99a4e;
 }
 
 .about p {
   font-size: 1.1rem;
-  color: #444;
+  color: #fff;
   margin-bottom: 1rem;
   max-width: 650px;
 }
@@ -105,6 +117,7 @@ nav a:hover {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
+  color: #d99a4e;
 }
 
 .book-list {
@@ -114,7 +127,7 @@ nav a:hover {
 }
 
 .book-card {
-  background-color: #ece8e1;
+  background-color: #f4e4d4;
   border-radius: 16px;       /* rounded rectangle */
   padding: 1rem 1.5rem;
   text-decoration: none;
@@ -183,7 +196,40 @@ nav a:hover {
   font-size: 1.2rem;
   color: #666;
 }
+ /* Footer  */
 
+.footer {
+  background: #000;
+  color: #666;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+  font-size: 0.88rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Footer brand name */
+.footer-brand {
+  color: var(--white);
+}
+.footer-divider {
+  border-top: 1px solid #666;
+  margin: 12px auto;
+  width: 60%;
+}
 /* responsivity - mobile */
 @media (max-width: 600px) {
   .hero h1 {
@@ -201,4 +247,5 @@ nav a:hover {
   nav ul {
     gap: 1rem;
   }
+
 }
