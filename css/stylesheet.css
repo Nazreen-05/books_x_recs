@@ -233,6 +233,15 @@ nav a:hover {
   margin: 12px auto;
   width: 60%;
 }
+.menu-toggle {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 /* responsivity - mobile */
 @media (max-width: 600px) {
   .hero h1 {
@@ -247,9 +256,6 @@ nav a:hover {
     padding: 3rem 1rem;
   }
 
-  nav ul {
-    gap: 1rem;
-  }
   .menu-toggle {
         display: block;
         font-size: 2rem;
@@ -267,5 +273,4 @@ nav a:hover {
     .nav-links.active {
         display: flex;
     }
-
 }
