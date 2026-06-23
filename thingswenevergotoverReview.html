@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books x Recs - Twisted Love</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="logo">Books x Recs</a>
+        <button class="menu-toggle">☰</button>
+        <ul class="nav-links">
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../bookRecs.html">Book Recs</a></li>
+            <li><a href="../tbr.html">TBR</a></li>
+        </ul>
+    </nav>
+
+    <section class="book-page container">
+
+        <!-- Book Header -->
+        <div class="book-page-header">
+            <img src="https://covers.openlibrary.org/b/isbn/9781728278872.jpg" alt="Things We Never Got Over" class="book-page-cover">
+            <div class="book-page-meta">
+                <h1 class="book-page-title">Things We Never Got Over</h1>
+                <p class="book-page-author">Lucy Score</p>
+                <p class="book-page-rating">3.5/ 5</p>
+                <p> Not recommended for under 18's (Matured content)</p>
+                <p class="book-page-tropes">small town ·runaway bride · sisters </p>
+            </div>
+        </div>
+
+        <!-- My Review -->
+        <div class="book-review-section">
+            <h2 class="section-heading">My Review</h2>
+            <p>Things We Never Got Over is the first book in the Things We Never Got Over series. Its a cozy read, you definitely fall in love with the characters.</p>
+            <p>Its classic small town trope and i loved the way it explores the complexities of friendship and love.  </p>
+            <p>Lots of unexpected twists and turns.</p>
+            <p class="review-verdict">Verdict: best book in the series</p>
+        </div>
+
+        <!-- Community Reviews -->
+        <div class="comments-section">
+            <h2 class="section-heading">What do you think?</h2>
+            <p class="comments-subtext">Read it too? Leave your thoughts below.</p>
+
+            <div class="comment-form">
+                <input type="text" id="commenter-name" class="comment-input" placeholder="Your name" maxlength="50">
+                 <!-- Star Rating -->
+                <div class="star-rating-wrap">
+                    <p class="star-label">Your rating</p>
+                    <div class="stars" id="star-rating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+
+                <textarea id="comment-text" class="comment-textarea" placeholder="Share your thoughts on this book..." rows="4" maxlength="500"></textarea>
+                <button class="comment-btn" onclick="postComment()">Post</button>
+            </div>
+
+            <div class="comments-list" id="comments-list">
+                <!-- comments appear here -->
+            </div>
+        </div>
+
+        <div class="back-link-wrap">
+            <a href="../bookRecs.html" class="back-link">← Back to Book Recs</a>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-divider"></div>
+        <p><strong class="footer-brand">Books_x_Recs</strong></p>
+        <p>© 2026 Books_x_Recs. All rights reserved.</p>
+        <p>Follow us on instagram <a href="https://www.instagram.com/books_x_recs" target="_blank" rel="noopener noreferrer">@books_x_recs</a></p>
+    </footer>
+
+    <script src="../menu.js"></script>
+    <script>
+                let selectedRating = 0;
+ 
+        // Star hover + click
+        const stars = document.querySelectorAll('.star');
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => highlightStars(star.dataset.value));
+            star.addEventListener('mouseout', () => highlightStars(selectedRating));
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.dataset.value);
+                highlightStars(selectedRating);
+            });
+        });
+ 
+        function highlightStars(count) {
+            stars.forEach(s => {
+                s.classList.toggle('active', parseInt(s.dataset.value) <= count);
+            });
+        }
+
+        // Load saved comments on page load
+        window.addEventListener('DOMContentLoaded', loadComments);
+
+        function loadComments() {
+            const saved = JSON.parse(localStorage.getItem('comments-things-we-never-got-over') || '[]');
+            const list = document.getElementById('comments-list');
+            list.innerHTML = '';
+            saved.forEach(c => renderComment(c.name, c.text));
+        }
+
+        function postComment() {
+            const nameInput = document.getElementById('commenter-name');
+            const textInput = document.getElementById('comment-text');
+
+            const name = nameInput.value.trim();
+            const text = textInput.value.trim();
+
+            if (!name || !text) {
+                alert('Please add your name and a comment before posting.');
+                return;
+            }
+
+            // Save to localStorage
+            const saved = JSON.parse(localStorage.getItem('comments-twisted-love') || '[]');
+            saved.push({ name, text });
+            localStorage.setItem('comments-twisted-love', JSON.stringify(saved));
+
+            // Render it
+            renderComment(name, text);
+
+            // Clear inputs
+            nameInput.value = '';
+            textInput.value = '';
+        }
+
+        function renderComment(name, text) {
+            const list = document.getElementById('comments-list');
+            const card = document.createElement('div');
+            card.className = 'comment-card';
+            card.innerHTML = `
+                <p class="comment-author">${escapeHtml(name)}</p>
+                <p class="comment-body">${escapeHtml(text)}</p>
+            `;
+            list.prepend(card);
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+        }
+    </script>
+</body>
+</html>
