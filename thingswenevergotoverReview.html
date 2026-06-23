@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books x Recs - Twisted Love</title>
+    <title>Books x Recs - ThingsWeNeverGotOver</title>
     <link rel="stylesheet" href="../css/stylesheet.css">
 </head>
 <body>
@@ -125,9 +125,9 @@
             }
 
             // Save to localStorage
-            const saved = JSON.parse(localStorage.getItem('comments-twisted-love') || '[]');
+            const saved = JSON.parse(localStorage.getItem('comments-things-we-never-got-over') || '[]');
             saved.push({ name, text });
-            localStorage.setItem('comments-twisted-love', JSON.stringify(saved));
+            localStorage.setItem('comments-things-we-never-got-over', JSON.stringify(saved));
 
             // Render it
             renderComment(name, text);
