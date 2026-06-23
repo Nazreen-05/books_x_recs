@@ -258,19 +258,37 @@ nav {
 
   .menu-toggle {
         display: block;
-        font-size: 2rem;
+        font-size: 1.5rem;
         background: none;
         border: none;
         cursor: pointer;
+        z-index: 1001;
+        color: #fff;
     }
+
 
     .nav-links {
-        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%; 
+
+        width: 70%;
+        height: 100vh;
+
+        background: black;
+
+        display: flex;
         flex-direction: column;
-        width: 100%;
+        gap: 2rem;
+
+        padding: 6rem 2rem;
+
+        transition: 0.3s ease;
+        z-index: 1000;
     }
 
+
     .nav-links.active {
-        display: flex;
+        right: 0; /* slides in */
     }
 }
