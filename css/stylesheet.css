@@ -119,6 +119,9 @@ nav a:hover {
   margin-bottom: 1.5rem;
   color: #d99a4e;
 }
+.book-row h3{
+  color: #fff;
+}
 
 .book-list {
   display: flex;
@@ -247,5 +250,22 @@ nav a:hover {
   nav ul {
     gap: 1rem;
   }
+  .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 
 }
