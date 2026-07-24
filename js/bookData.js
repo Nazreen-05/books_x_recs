@@ -6,12 +6,16 @@ const BOOKS = [
     isbn: "9781728205489",
     rating: 4.5,
     category: "Young-Adult",
-    tropes: [],
+    tropes: ["Right person, wrong time", "childhood friends", "first love"],
     blurb: "A heartbreaking story of first love, friendship, and the path not taken.",
     review: [
-      "Add your full review here."
+      "If He Had Been with Me is a deeply emotional coming-of-age novel that explores first love, missed opportunities, friendship, grief, and the painful reality that life doesn't always unfold the way we hope.",
+      "Laura Nowlin tells the story through Autumn's perspective as she reflects on her complicated relationship with Finny—her childhood best friend who slowly becomes a stranger as they grow up.", 
+      "The novel isn't fast-paced; instead, it focuses on the small moments that build relationships over time. That slower pace makes the ending hit even harder. Autumn's struggles with identity, mental health, family expectations, and love feel authentic, making her a relatable and flawed protagonist.",
+      "Finny is charming, kind, and easy to root for, which makes their 'what if' relationship all the more heartbreaking.",
+      "While some readers may find the middle of the book slow, the emotional payoff is unforgettable. The ending is devastating, lingering long after the final page, and it's one of those books that leaves you reflecting on how fragile life and timing can be."
     ],
-    verdict: ""
+    verdict: "A reminder that timing can change everything."
   },
   {
     slug: "a-thousand-boy-kisses",
