@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books x Recs</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">Books x Recs</a>
+        <button class="menu-toggle">☰</button>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="bookRecs.html">Book Recs</a></li>
+            <li><a href="tbr.html">TBR</a></li>
+        </ul>
+    </nav>
+
+    <section class="book-page container">
+
+        <!-- Book Header -->
+        <div class="book-page-header">
+            <img id="book-cover" src="" alt="" class="book-page-cover">
+            <div class="book-page-meta">
+                <h1 id="book-title" class="book-page-title"></h1>
+                <p id="book-author" class="book-page-author"></p>
+                <p id="book-rating" class="book-page-rating"></p>
+                <p id="book-age-note"></p>
+                <p id="book-tropes" class="book-page-tropes"></p>
+            </div>
+        </div>
+
+        <!-- My Review -->
+        <div class="book-review-section">
+            <h2 class="section-heading">My Review</h2>
+            <div id="book-review-text"></div>
+            <div id="book-verdict"></div>
+        </div>
+
+        <!-- Community Reviews -->
+        <div class="comments-section">
+            <h2 class="section-heading">What do you think?</h2>
+            <p class="comments-subtext">Read it too? Leave your thoughts below.</p>
+
+            <div class="comment-form">
+                <input type="text" id="commenter-name" class="comment-input" placeholder="Your name" maxlength="50">
+                <div class="star-rating-wrap">
+                    <p class="star-label">Your rating</p>
+                    <div class="stars" id="star-rating">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+
+                <textarea id="comment-text" class="comment-textarea" placeholder="Share your thoughts on this book..." rows="4" maxlength="500"></textarea>
+                <button class="comment-btn" onclick="postComment()">Post</button>
+            </div>
+
+            <div class="comments-list" id="comments-list">
+                <!-- comments appear here -->
+            </div>
+        </div>
+
+        <div class="back-link-wrap">
+            <a href="bookRecs.html" class="back-link">← Back to Book Recs</a>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="footer-divider"></div>
+        <p><strong class="footer-brand">Books_x_Recs</strong></p>
+        <p>© 2026 Books_x_Recs. All rights reserved.</p>
+        <p>Follow us on instagram <a href="https://www.instagram.com/books_x_recs" target="_blank" rel="noopener noreferrer">@books_x_recs</a></p>
+    </footer>
+
+    <script src="menu.js"></script>
+    <script src="js/bookData.js"></script>
+    <script src="js/renderBook.js"></script>
+</body>
+</html>
