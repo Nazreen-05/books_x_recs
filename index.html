@@ -21,15 +21,25 @@
         <p>Book_x_recs, find what you're not looking for</p>
     </section>
 
+    <section class="container">
+        <div class="vibe-search-block">
+            <h2 class="category-title">Describe your vibe</h2>
+            <form id="vibe-search-form" class="vibe-search-form">
+                <input type="text" id="vibe-search-input" placeholder="e.g. grumpy x sunshine but make it heartbreaking" maxlength="200">
+                <button type="submit">Find my read</button>
+            </form>
+            <p id="vibe-search-status" class="vibe-search-status"></p>
+            <div id="vibe-search-results" class="book-list"></div>
+        </div>
+    </section>
+
    <section class="book-row container">
         <h2>Discover</h2>
         <div id="book-rows">
-            <!-- rendered by js/render-home.js from js/books-data.js -->
+            <!-- rendered by js/renderIndex.js from js/bookData.js -->
         </div>
     </section>
- 
 
-    
     <!-- Footer -->
   <footer class="footer">
     <div class="footer-divider"></div>
@@ -37,12 +47,10 @@
     <p>© 2026 Books_x_Recs. All rights reserved.</p>
     <p> Follow us on instagram <a href="https://www.instagram.com/books_x_recs" target="_blank" rel="noopener noreferrer">@books_x_recs</a></p>
   </footer>
-   
-    </div>
-    </section>
 
     <script src="menu.js"></script>
     <script src="js/bookData.js"></script>
+    <script src="js/vibeSearch.js"></script>
     <script src="js/renderIndex.js"></script>
 </body>
 </html>

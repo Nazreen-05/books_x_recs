@@ -24,12 +24,14 @@ const BOOKS = [
     isbn: "9781504757638",
     rating: 4,
     category: "Young-Adult",
-    tropes: [],
+    tropes: ["Childhood friends to lovers", "First love", "Coming of age"],
     blurb: "A heartwarming tale of love, loss, and the power of second chances.",
     review: [
-      "Add your full review here."
+      "Tillie Cole creates characters that are easy to fall in love with. Poppy's optimism and appreciation for life's little moments perfectly balance Rune's passionate and intense personality.",
+      "Their relationship is heartfelt, tender, and unforgettable, making every chapter feel meaningful. While the story is undeniably heartbreaking, it's also filled with hope, reminding readers to cherish the people they love while they can.",
+      "This is one of those books that will have you smiling one moment and reaching for tissues the next. It's emotional from beginning to end and leaves a lasting impact long after you've finished reading."
     ],
-    verdict: ""
+    verdict: "Beautiful romance that reminds us that the greatest love stories aren't always the longest, but they leave the seepest mark"
   },
   {
     slug: "twisted-love",
@@ -58,9 +60,12 @@ const BOOKS = [
     tropes: ["small town", "runaway bride", "sisters"],
     blurb: "Grumpy x Soft girl romance",
     review: [
-      "Add your full review here."
+      "Things We Never Got Over is a heartwarming small-town romance filled with humor, emotional healing, and unforgettable characters.",
+      "The story follows Naomi, whose life is turned upside down after she arrives in the quirky town of Knockemout to help her estranged twin sister",
+      "only to be abandoned and left caring for a niece she never knew existed. Along the way, she clashes with Knox, the town's grumpy barber who's determined to keep everyone at arm's length",
+      "Although it's a longer romance, the engaging cast of characters and the charming small-town atmosphere keep the story entertaining throughout. Knockemout feels like a place you'll want to visit again and again."
     ],
-    verdict: ""
+    verdict: "A charming, funny, and heartfelt romance that perfectly balances emotional moments with laugh-out-loud chemistry."
   },
   {
     slug: "all-about-love",
@@ -69,12 +74,15 @@ const BOOKS = [
     isbn: "9780060959470",
     rating: 4,
     category: "Non-fiction",
-    tropes: [],
+    tropes: ["Self-discovery", "emotional growth","self-love"],
     blurb: "Real take on love",
     review: [
-      "Add your full review here."
+      "All About Love is a thought-provoking and transformative exploration of what love truly means.",
+      "In this powerful nonfiction book, bell hooks challenges the common belief that love is simply a feeling, arguing instead that love is an intentional practice built on care, respect, trust, responsibility, commitment, and honest communication.",
+      "Drawing from personal experiences, psychology, philosophy, and social critique, hooks examines how childhood, family, culture, and society shape our understanding of love. Rather than focusing only on romantic relationships, she explores love in all its forms",
+      ",self-love, friendship, family, community, and spirituality—encouraging readers to rethink the way they give and receive love."
     ],
-    verdict: ""
+    verdict: "A insightful and impactful book that offers a fresh perspective on the nature of love."
   }
 ];
  
